@@ -13,7 +13,7 @@ export function CircuitBreakerCalculator() {
 
   const getPoolSizeByNumberOfBoxes = (requestPerHour, numberOfBoxes) => {
     const result = Math.ceil(
-      (requestPerHour / 60 / 60) / numberOfBoxes / 2) * rateTimeOut
+      (requestPerHour / 60 / 60) / numberOfBoxes * 2) * rateTimeOut
     ;
     return result;
   };
